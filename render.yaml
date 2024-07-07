@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: spreadsheet-fcm-notifier
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: GOOGLE_SHEETS_CREDS
+        value: ${GOOGLE_SHEETS_CREDS}
